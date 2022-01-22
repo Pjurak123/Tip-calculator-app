@@ -1,0 +1,384 @@
+:root {
+  --clr-primary: hsl(172, 67%, 45%);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(189, 41%, 97%);
+  --clr-neutral-300: hsl(185, 41%, 84%);
+  --clr-neutral-400: hsl(184, 14%, 56%);
+  --clr-neutral-500: hsl(186, 14%, 43%);
+  --clr-neutral-600: hsl(183, 100%, 15%);
+
+  --ff-primary: "Space Mono", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-neutral-300);
+  font-family: var(--ff-primary);
+}
+
+.container {
+  max-width: 1100px;
+  min-width: 235px;
+}
+
+/* LOGO IMG BEFORE CARD DIV */
+
+.image-container {
+  text-align: center;
+  margin: 10%;
+}
+
+/* PARENT ELEMENT OF COLUMN1 AND COLUMN2*/
+.card {
+  background-color: var(--clr-neutral-white);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 3% 7%;
+}
+
+/* PARENT ELEMENT OF -.margin-container, people-container, title-container-text and more */
+.column1 {
+  margin-bottom: 0;
+}
+
+.column2 {
+  background-color: var(--clr-neutral-600);
+  border-radius: 20px;
+  padding: 12% 8%;
+  padding-bottom: 5%;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+/* CHILD ELEMENTS OF COLUMN1 PARENT*/
+
+.title-container-text {
+  color: var(--clr-neutral-500);
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.people-container {
+  margin-bottom: 0;
+}
+
+.margin-container {
+  margin: 10% 0;
+  width: 100%;
+}
+
+/* INPUT CONTAINER WITH DOLLAR SIGN */
+
+input::placeholder {
+  color: var(--clr-neutral-400);
+  font-weight: 700;
+}
+
+input.dollar {
+  background: url("./images/icon-dollar.svg") no-repeat left 1.4rem center;
+  background-color: var(--clr-neutral-200);
+  border: none;
+  border-radius: 0.3em;
+  color: var(--clr-neutral-600);
+  font-family: var(--clr-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.6rem;
+  text-align: right;
+  width: 100%;
+}
+
+/* INPUT CONTAINER WITH PEOPLE SIGN */
+
+input.people {
+  background: url(./images/icon-person.svg) no-repeat left 1.4rem center;
+  background-color: var(--clr-neutral-200);
+  border: none;
+  border-radius: 0.3em;
+  color: var(--clr-neutral-600);
+  font-family: var(--clr-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.6rem;
+  text-align: right;
+  width: 100%;
+}
+
+/* BUTTON CONTAINER */
+
+.button-container {
+  width: 100%;
+  margin: 0;
+}
+
+/* Buttons style neutral mode */
+
+.button {
+  background-color: var(--clr-neutral-600);
+  border-radius: 0.4rem;
+  border: none;
+  color: var(--clr-neutral-200);
+  font-family: var(--clr-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2% 0 2% 0;
+  padding: 0.5rem;
+  text-align: center;
+  width: 48%;
+}
+
+/* Buttons style on hover mode */
+
+.button:hover {
+  background-color: var(--clr-primary);
+  cursor: pointer;
+  color: var(--clr-neutral-600);
+  font-weight: 700;
+}
+
+.button:active {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-600);
+}
+
+.active {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-600);
+}
+
+/* CUSTOM button */
+
+.custom-button {
+  background-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-500);
+  text-align: center;
+}
+
+/* SPECIAL CLASSES for color change,font size and font weight */
+
+.color-white {
+  color: var(--clr-neutral-white);
+}
+
+.color-cyan {
+  color: var(--clr-neutral-400);
+  font-weight: 700;
+}
+
+.color-primary {
+  color: var(--clr-primary);
+  font-size: 1.8rem;
+}
+
+/* RESET Button on neutral + hover */
+
+.reset-button {
+  background-color: var(--clr-primary);
+  border: none;
+  border-radius: 0.4rem;
+  color: var(--clr-neutral-600);
+  font-family: var(--ff-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.4rem 0;
+  width: 100%;
+}
+
+/* FLEX CONTAINER for that look inside COLUMN2 with left and right part */
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.left-part {
+  flex-direction: column;
+  width: 50%;
+}
+
+.right-part {
+  text-align: right;
+  width: 50%;
+}
+
+/* INPUT INVALID */
+
+.error:invalid {
+  border: 2px solid red;
+}
+
+footer {
+  font-family: var(--ff-primary);
+  color: var(--clr-neutral-500);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* DESKTOP VERSION OF APP */
+
+@media (min-width: 850px) {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  .button {
+    width: 30.8%;
+  }
+
+  .bill-container {
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .tip-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .people-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-container {
+    margin-bottom: 3rem;
+  }
+
+  .container {
+    margin: auto;
+    width: 80%;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .column1 {
+    width: 50%;
+  }
+
+  .column2 {
+    width: 50%;
+    margin: 0;
+    padding: 6%;
+  }
+
+  .card {
+    gap: 50px;
+  }
+
+  .reset-container {
+    padding-top: 5rem;
+  }
+
+  .flex-container {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1319px) {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  .button {
+    width: 31.8%;
+  }
+
+  .bill-container {
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .tip-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .people-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .image-container {
+    margin-bottom: 3rem;
+  }
+
+  .container {
+    margin: auto;
+    width: 80%;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .column1 {
+    width: 50%;
+  }
+
+  .column2 {
+    width: 50%;
+    margin: 0;
+    padding: 6%;
+  }
+
+  .card {
+    gap: 50px;
+  }
+
+  .reset-container {
+    padding-top: 5rem;
+  }
+
+  .flex-container {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 285px) {
+  .button {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+}

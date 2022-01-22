@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip-calculator-app</title>
+    <!--GOOGLE FONT LINK ZA FONT-FAMILY SPACE MOON-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Link za povezivanje external cssa-->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img src="/images/logo.svg" alt="logo-img" class="logo-img" />
+      </div>
+      <div class="card">
+        <div class="column1">
+          <div class="bill-container margin-container">
+            <p class="title-container-text">Bill</p>
+            <input
+              type="text"
+              name="bill-price"
+              placeholder="0"
+              class="dollar error"
+              id="bill"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+            />
+          </div>
+          <div class="tip-container margin-container">
+            <p class="title-container-text">Select Tip %</p>
+            <div class="button-container">
+              <button type="submit" id="5" class="button">5%</button>
+              <button type="submit" id="10" class="button">10%</button>
+              <button type="submit" id="15" class="button">15%</button>
+              <button type="submit" id="25" class="button">25%</button>
+              <button type="submit" id="50" class="button">50%</button>
+              <input
+                type="number"
+                id="custom"
+                class="button custom-button"
+                placeholder="Custom"
+              />
+              <!-- <button type="submit" id="custom" class="button custom-button"> 
+                Custom
+              </button> -->
+            </div>
+          </div>
+          <div class="people-container margin-container">
+            <p class="title-container-text">Number of People</p>
+            <input
+              type="text"
+              name="people-number"
+              placeholder="0"
+              class="people error"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              id="people"
+            />
+          </div>
+        </div>
+        <div class="column2">
+          <div class="flex-container">
+            <div class="left-part">
+              <h4 class="color-white">Tip Amount</h4>
+              <p class="color-cyan">/ person</p>
+            </div>
+            <div class="right-part">
+              <h3 class="color-primary" id="tip-amount">$0.00</h3>
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="left-part">
+              <h4 class="color-white">Total</h4>
+              <p class="color-cyan">/ person</p>
+            </div>
+            <div class="right-part">
+              <h3 class="color-primary" id="total-amount-per-person">$0.00</h3>
+            </div>
+          </div>
+          <div class="reset-container">
+            <button type="reset" class="reset-button" id="reset">RESET</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer__part">
+      <h3>Created by: Patrik Jurak</h3>
+    </footer>
+    <!--Scripta od external javascripta-->
+    <script src="index.js"></script>
+  </body>
+</html>
